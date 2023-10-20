@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Showing Alerts</title>
+</head>
+<style>
+    * {
+        text-align: center;
+    }
+
+    .c1 input {
+        height: 30px;
+        width: 300px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    .c2 button {
+        height: 30px;
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <div class="c1">
+        <input id="inp1" type="text" placeholder="ENTER YOUR FIRSTNAME">
+        <input id="inp2" type="text" placeholder="ENTER YOUR LASTNAME">
+    </div>
+
+    <div class="c2">
+        <button onclick="showFirstName()">FIRSTNAME</button>
+        <button onclick="showLastName()">LASTNAME</button>
+        <button onclick="showFullName()">FIRSTNAME LASTNAME</button>
+
+    </div>
+
+    <script type="text/javascript">
+        let firstname = document.getElementById('inp1')
+        let lastname = document.getElementById('inp2');
+
+        function showFirstName() {
+            // Complete to show an alert with your first name
+            alert(firstname.value);
+        }
+
+        function showLastName() {
+            // Complete to show an alert with your last name 
+           alert(lastname.value);
+        }
+
+        function showFullName() {
+            // Complete to show an alert with your full name (firstname lastname)
+        let ans = firstname.value + " " + lastname.value;
+        alert(ans);
+        }
+    </script>
+</body>
+
+</html>
