@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="name" id="name">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email">
+    <input type="text" name="mobile" id="mobile">
+    <hr>
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr>
+    <button onclick="showName()">NAME</button>
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showEmail()">EMAIL</button>
+    <button onclick="showMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+    <button onclick="resetDisplay()">RESET DISPLAY</button>
+</body>
+
+</html>
+
+<script>
+    let name = document.getElementById("name");
+    let gender = document.getElementById("gender");
+    let email = document.getElementById("email");
+    let mobile = document.getElementById("mobile");
+    let name1 = document.getElementById("dName");
+    let gender1 = document.getElementById("dGender");
+    let email1 = document.getElementById("dEmail");
+    let mobile1 = document.getElementById("dMobile");
+    function showName() {
+        // Show filled name inside h1
+        name1.innerText = name.value;
+    }
+
+    function showGender() {
+        // Show the selected gender inside h2
+        gender1.innerText = gender.value;
+    }
+
+    function showEmail() {
+        // Show the filled email inside h3
+        email1.innerText = email.value;
+    }
+
+    function showMobile() {
+        // Show the filled mobile inside h4
+        mobile1.innerText = mobile.value;
+    }
+
+    function resetForm() {
+        // Reset all the form elements to default values (blank "")
+        name.value = '';
+        email.value = '';
+        gender.value = '';
+        mobile.value = ''
+
+    }
+
+    function resetDisplay() {
+        // Reset all the headings (h1, h2, h3, h4) to blank values
+        name1.innerText = 'NAME';
+        email1.innerText = 'EMAIL';
+        gender1.innerText = 'GENDER';
+        mobile1.innerText = 'MOBILE'
+    }
+</script>
